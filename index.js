@@ -13,8 +13,14 @@ app.get('/', (req, res) => {
     // res.send('Hello world!')
 })
 
+app.get('/', (req, res) => {
+    res.render('places/index')
+    // res.send('Hello world!')
+})
+
 app.get('*', (req, res) => {
-    res.status(404).render('error404')
+    // res.status(404).render('error404')
+    res.render('error404')
 })
 
 app.listen(process.env.PORT)
